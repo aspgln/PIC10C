@@ -223,5 +223,6 @@ Player::Player(int m): money(m){}
 void Player::call(){
     
 }
+
 void stop();
 bool is_player_win();
