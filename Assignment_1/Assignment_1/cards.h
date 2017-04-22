@@ -61,16 +61,24 @@ private:
     rank_t rank;
 };
 
+const double player_threshold = 7.5;
+const double dealer_threshold = 5.5;
 
 class Hand {
 public:
     // A vector of Cards
     Hand();
     
-    // You decide what functions you'll need...
+    // calclulate the sum of the cards
+    double get_sum(const vector<Card> &v) const;
+    // check if cards in hand is busted
+    bool is_busted(vector<Card>);
+    
     
 private:
-    // You decide what fields you'll need...
+    vector<Card> playerHand;
+    vector<Card> dealerHand;
+    double sum;
 };
 
 
@@ -79,6 +87,9 @@ public:
     // Constructor.
     //    Assigns initial amount of money
     Player(int m);
+    void call();
+    void stop();
+    bool is_player_win();
     
     // You decide what functions you'll need...
     
