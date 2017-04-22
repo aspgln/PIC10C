@@ -199,6 +199,18 @@ bool Card::operator < (Card card2) const {
  ************************************************* */
 // Implemente the member functions of the Hand class here.
 
+Hand::Hand(): sum(0){}
+
+double Hand::get_sum(const vector<Card>& v) const{
+    return sum;
+}
+
+bool Hand::is_busted(const vector<Card> v) {
+    if (sum > player_threshold)
+        return true;
+    else
+        return false;
+}
 
 
 /* *************************************************
