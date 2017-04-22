@@ -69,6 +69,8 @@ public:
     // A vector of Cards
     Hand();
     
+    void add(vector<Card> c);
+    
     // calclulate the sum of the cards
     double get_sum(const vector<Card> &v) const;
     // check if cards in hand is busted

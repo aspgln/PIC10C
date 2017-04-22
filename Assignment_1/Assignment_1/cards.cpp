@@ -217,3 +217,11 @@ bool Hand::is_busted(const vector<Card> v) {
  Player class
  ************************************************* */
 // Implemente the member functions of the Player class here.
+
+Player::Player(int m): money(m){}
+
+void Player::call(){
+    
+}
+void stop();
+bool is_player_win();
